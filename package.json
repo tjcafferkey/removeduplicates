@@ -1,6 +1,6 @@
 {
   "name": "removeduplicates",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Function that removes duplicate objects based on a key from an array of objects.",
   "main": "lib/index.js",
   "scripts": {
