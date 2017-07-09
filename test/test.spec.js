@@ -19,7 +19,7 @@ describe("removeDupicate should filter out duplicate objects from the given arra
             {
                 id: 1234,
                 selected: true,
-                otherVal: 'def'
+                otherVal: 'abc'
             }
         ];
 
@@ -110,5 +110,19 @@ describe("removeDupicate should filter out duplicate objects from the given arra
 
         let uniqueArray = removeDuplicates(tempArray, "id");
         expect(uniqueArray).to.deep.equal(tempArray);
+    });
+
+    it("should remove one string item from the array", function() {
+        let tempArray = ["tom", "jack", "tom"];
+
+        let uniqueArray = removeDuplicates(tempArray);
+        expect(uniqueArray).to.deep.equal(["tom", "jack"]);
+    });
+
+    it("should remove one number item from the array", function() {
+        let tempArray = [1, 2, 3, 4, 2];
+
+        let uniqueArray = removeDuplicates(tempArray);
+        expect(uniqueArray).to.deep.equal([1, 2, 3, 4,]);
     });
 });
