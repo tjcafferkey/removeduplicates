@@ -1,5 +1,5 @@
 # removeDuplicates
-Function that removes duplicate objects based on a key from an array of objects.
+Function that removes duplicates from an array.
 
 ## Install
 
@@ -12,6 +12,22 @@ npm install removeduplicates
 ```javascript
 var removeDuplicates = require('removeDuplicates');
 ```
+
+### Remove duplicate items
+
+```javascript
+var tempArray = ["tom", "jack", "jake", "tom"];
+
+var uniqueArray = removeDuplicates(tempArray);
+```
+
+uniqueArray will now equal the following
+
+```javascript
+["tom", "jack", "jake"];
+```
+
+### Remove duplicate objects
 
 Passing in your array of objects as the first parameter, and the key you're checking against as the second parameter. The function will remove any duplicate values based on this key.
 
